@@ -7,3 +7,5 @@ c:\users\26007051\documents\visual studio 2012\Projects\AulaApp\View\obj\Debug\V
 c:\users\26007051\documents\visual studio 2012\Projects\AulaApp\View\obj\Debug\View.csproj.GenerateResource.Cache
 c:\users\26007051\documents\visual studio 2012\Projects\AulaApp\View\obj\Debug\View.exe
 c:\users\26007051\documents\visual studio 2012\Projects\AulaApp\View\obj\Debug\View.pdb
+C:\Users\26007051\Documents\Visual Studio 2012\Projects\AulaApp\View\obj\Debug\View.frmCadPessoa.resources
+C:\Users\26007051\Documents\Visual Studio 2012\Projects\AulaApp\View\obj\Debug\View.frmListaPessoas.resources
