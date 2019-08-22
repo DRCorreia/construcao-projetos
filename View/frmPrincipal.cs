@@ -21,5 +21,15 @@ namespace View
         {
             gpbDadosPrincipais.Visible = false;
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
