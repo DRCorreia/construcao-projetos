@@ -30,10 +30,10 @@
         {
             this.gpbPessoas = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.gcolID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcolNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcolEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.gpbPessoas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
@@ -65,15 +65,6 @@
             this.dgvDados.Size = new System.Drawing.Size(326, 354);
             this.dgvDados.TabIndex = 4;
             // 
-            // btnFechar
-            // 
-            this.btnFechar.Location = new System.Drawing.Point(287, 410);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 7;
-            this.btnFechar.Text = "Fechar";
-            this.btnFechar.UseVisualStyleBackColor = true;
-            // 
             // gcolID
             // 
             this.gcolID.HeaderText = "ID";
@@ -94,6 +85,16 @@
             this.gcolEmail.Name = "gcolEmail";
             this.gcolEmail.ReadOnly = true;
             this.gcolEmail.Width = 150;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Location = new System.Drawing.Point(287, 410);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 23);
+            this.btnFechar.TabIndex = 7;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // frmListaPessoas
             // 

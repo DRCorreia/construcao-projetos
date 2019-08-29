@@ -47,5 +47,19 @@ namespace View
         {
             itsLabelHora.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadPessoa form = new frmCadPessoa();
+
+            form.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaPessoas form = new frmListaPessoas();
+
+            form.ShowDialog();
+        }
     }
 }
