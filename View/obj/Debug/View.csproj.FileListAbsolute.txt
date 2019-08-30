@@ -11,3 +11,7 @@ C:\Users\26007051\Documents\Visual Studio 2012\Projects\AulaApp\View\obj\Debug\V
 C:\Users\26007051\Documents\Visual Studio 2012\Projects\AulaApp\View\obj\Debug\View.frmListaPessoas.resources
 C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\View\bin\Debug\Model.dll
 C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\View\bin\Debug\Model.pdb
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\View\bin\Debug\Control.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\View\bin\Debug\Dao.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\View\bin\Debug\Control.pdb
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\View\bin\Debug\Dao.pdb

@@ -38,6 +38,7 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gpbDadosPrincipais = new System.Windows.Forms.GroupBox();
+            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.lblFoto = new System.Windows.Forms.Label();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.lblTexto = new System.Windows.Forms.Label();
-            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdbSolteiro = new System.Windows.Forms.RadioButton();
             this.rdbCasado = new System.Windows.Forms.RadioButton();
@@ -127,6 +127,12 @@
             // cmbCidade
             // 
             this.cmbCidade.FormattingEnabled = true;
+            this.cmbCidade.Items.AddRange(new object[] {
+            "Rio de Janeiro",
+            "Araurama",
+            "Niterói",
+            "São Paulo",
+            "Belo Horizonte"});
             this.cmbCidade.Location = new System.Drawing.Point(330, 87);
             this.cmbCidade.Name = "cmbCidade";
             this.cmbCidade.Size = new System.Drawing.Size(135, 21);
@@ -144,6 +150,10 @@
             // cmbEstado
             // 
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "RJ",
+            "MG",
+            "SP"});
             this.cmbEstado.Location = new System.Drawing.Point(331, 39);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(135, 21);
@@ -174,6 +184,17 @@
             this.gpbDadosPrincipais.TabIndex = 4;
             this.gpbDadosPrincipais.TabStop = false;
             this.gpbDadosPrincipais.Text = "Dados Principais";
+            // 
+            // ptbFoto
+            // 
+            this.ptbFoto.BackColor = System.Drawing.Color.Transparent;
+            this.ptbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbFoto.Location = new System.Drawing.Point(366, 19);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.Size = new System.Drawing.Size(100, 99);
+            this.ptbFoto.TabIndex = 6;
+            this.ptbFoto.TabStop = false;
+            this.ptbFoto.Click += new System.EventHandler(this.ptbFoto_Click);
             // 
             // lblFoto
             // 
@@ -224,6 +245,7 @@
             this.txbNome.Size = new System.Drawing.Size(270, 20);
             this.txbNome.TabIndex = 0;
             this.txbNome.Text = "Nome completo!";
+            this.txbNome.Click += new System.EventHandler(this.txbNome_Click);
             // 
             // lblTexto
             // 
@@ -233,17 +255,6 @@
             this.lblTexto.Size = new System.Drawing.Size(38, 13);
             this.lblTexto.TabIndex = 1;
             this.lblTexto.Text = "Nome:";
-            // 
-            // ptbFoto
-            // 
-            this.ptbFoto.BackColor = System.Drawing.Color.Transparent;
-            this.ptbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbFoto.Location = new System.Drawing.Point(366, 19);
-            this.ptbFoto.Name = "ptbFoto";
-            this.ptbFoto.Size = new System.Drawing.Size(100, 99);
-            this.ptbFoto.TabIndex = 6;
-            this.ptbFoto.TabStop = false;
-            this.ptbFoto.Click += new System.EventHandler(this.ptbFoto_Click);
             // 
             // groupBox3
             // 
@@ -390,6 +401,7 @@
             this.Controls.Add(this.gpbDadosPrincipais);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCadPessoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Pessoas";
             this.gpbDadosComp.ResumeLayout(false);
             this.gpbDadosComp.PerformLayout();

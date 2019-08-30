@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Control;
 
 namespace View
 {
@@ -30,8 +31,9 @@ namespace View
             Pessoa pessoa = CarregarPessoaDoForm();
 
             //Enviar objeto para camada de controle para Salvar no arquivo
+            PessoaCtrl control = new PessoaCtrl();
 
-
+            control.SalvarPessoaNoArquivo(pessoa);
         }
 
         //Carregar dados do formulário em um Novo Objeto do Tipo Pessoa
@@ -83,6 +85,11 @@ namespace View
             {
                 p.Imagem = janelaAbrirArquivo.FileName;
             }
+        }
+
+        private void txbNome_Click(object sender, EventArgs e)
+        {
+            txbNome.Text = "";
         }
     
         

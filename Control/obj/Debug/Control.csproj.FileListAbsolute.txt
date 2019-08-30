@@ -1,0 +1,9 @@
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\bin\Debug\Control.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\bin\Debug\Control.pdb
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\bin\Debug\Dao.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\bin\Debug\Model.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\bin\Debug\Dao.pdb
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\bin\Debug\Model.pdb
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\obj\Debug\Control.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Control\obj\Debug\Control.pdb

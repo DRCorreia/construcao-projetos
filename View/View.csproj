@@ -104,6 +104,10 @@
     <None Include="imagens\logo_lasalle.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{ab234f3b-caa9-4ac4-bcd4-211f91f3f908}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{e4491a58-44f1-4416-9bdf-2a9b5ae66e57}</Project>
       <Name>Model</Name>
