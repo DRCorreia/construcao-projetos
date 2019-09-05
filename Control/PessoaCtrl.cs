@@ -26,13 +26,19 @@ namespace Control
             }
         }
 
-        public List<Pessoa> ListarPessoasDoArquivo()
+        public Dictionary<Int64, Pessoa> ListarPessoasDoArquivo()
         {
             try
             {
+                Dictionary<Int64, Pessoa> mapaPessoas = new Dictionary<Int64, Pessoa>();
                 PessoaDAO dao = new PessoaDAO();
 
-                return dao.ListarPessoasDoArquivo();
+                foreach (Pessoa o in dao.ListarPessoasDoArquivo())
+                {
+                    mapaPessoas.Add(o.Id, o);
+                }
+
+                return mapaPessoas;
             }
             catch (Exception ex)
             {

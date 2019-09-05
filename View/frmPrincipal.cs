@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
+using Control;
 
 namespace View
 {
     public partial class frmPrincipal : Form
     {
+
+        private Dictionary<Int64, Pessoa> mapaPessoas;
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -35,12 +40,20 @@ namespace View
         {
             frmCadPessoa form = new frmCadPessoa();
 
+            Int64 ultimaChave = mapaPessoas.Keys.Max() + 1;
+
+            //Int64 ultimoID = Convert.ToInt64(tamChaves);
+
+            form.Tag = ultimaChave;
+
             form.ShowDialog();
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             tmHora.Enabled = true;
+
+            CarregarListaPessoas();
         }
 
         private void tmHora_Tick(object sender, EventArgs e)
@@ -59,7 +72,24 @@ namespace View
         {
             frmListaPessoas form = new frmListaPessoas();
 
+            form.Tag = mapaPessoas;
+
             form.ShowDialog();
+        }
+
+        private void CarregarListaPessoas()
+        {
+            try
+            {
+                PessoaCtrl control = new PessoaCtrl();
+
+                mapaPessoas = control.ListarPessoasDoArquivo();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO AO CARREGAR LISTA DE PESSOAS: " + ex.Message);
+            }
         }
     }
 }

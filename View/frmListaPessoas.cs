@@ -26,27 +26,29 @@ namespace View
 
         private void frmListaPessoas_Load(object sender, EventArgs e)
         {
-            CarregarListaPessoas();
+            CarregarMapaPessoas();
         }
 
-        private void CarregarListaPessoas()
+        private void CarregarMapaPessoas()
+        {
+            Dictionary<Int64, Pessoa> mapaPessoas = (Dictionary<Int64, Pessoa>)this.Tag;
+            foreach (Pessoa o in mapaPessoas.Values)
+            {
+                dgvDados.Rows.Add(o.Id, o.Nome, o.Email);
+            }
+        }
+
+        private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                PessoaCtrl control = new PessoaCtrl();
-
-                List<Pessoa> listaPessoas = control.ListarPessoasDoArquivo();
-                int i = 0;
-                foreach (Pessoa o in listaPessoas)
-                {
-                    i++;
-                    dgvDados.Rows.Add(i, o.Nome, o.Email);
-                }
+                //dgvDados.SelectedRows[0].Cells[2]
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERRO AO CARREGAR LISTA DE PESSOAS: " + ex.Message);
+                MessageBox.Show("ERRO AO SELECIONAR LINHA: " + ex.Message);
             }
         }
+
     }
 }

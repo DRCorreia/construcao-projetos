@@ -18,6 +18,7 @@ namespace Dao
             {
                 StreamWriter escritor = new StreamWriter(path, true);
 
+                escritor.Write(_p.Id + ";");
                 escritor.Write(_p.Nome + ";");
                 escritor.Write(_p.Telefone + ";");
                 escritor.Write(_p.Email + ";");
@@ -63,17 +64,18 @@ namespace Dao
                     String[] colunas = linhas[i].Split(separadorColunas);
 
                     //Populando campos do objeto pessoa pelos objetos do vetor
-                    p.Nome = colunas[0];
-                    p.Telefone = colunas[1];
-                    p.Email = colunas[2];
-                    p.TipoEndereco = Convert.ToInt32(colunas[3]);
-                    p.Endereco = colunas[4];
-                    p.Estado = Convert.ToInt32(colunas[5]);
-                    p.Cidade = Convert.ToInt32(colunas[6]);
-                    p.Sexo = colunas[7];
-                    p.EstadoCivil = colunas[8];
-                    p.Filhos = Convert.ToBoolean(colunas[9]);
-                    p.Animais = Convert.ToBoolean(colunas[10]);
+                    p.Id = Convert.ToInt64(colunas[0]);
+                    p.Nome = colunas[1];
+                    p.Telefone = colunas[2];
+                    p.Email = colunas[3];
+                    p.TipoEndereco = Convert.ToInt32(colunas[4]);
+                    p.Endereco = colunas[5];
+                    p.Estado = Convert.ToInt32(colunas[6]);
+                    p.Cidade = Convert.ToInt32(colunas[7]);
+                    p.Sexo = colunas[8];
+                    p.EstadoCivil = colunas[9];
+                    p.Filhos = Convert.ToBoolean(colunas[10]);
+                    p.Animais = Convert.ToBoolean(colunas[11]);
 
                     listaPessoas.Add(p);
                 }

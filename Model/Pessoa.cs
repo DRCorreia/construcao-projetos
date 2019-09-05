@@ -9,6 +9,8 @@ namespace Model
     public class Pessoa
     {
         #region Atributos
+
+        public Int64 Id { set; get; }
         
         //Declaração Implícita
         public String Nome { set; get; }

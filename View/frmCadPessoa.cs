@@ -16,6 +16,8 @@ namespace View
     {
         private Pessoa p = new Pessoa();
 
+        //private Dic
+
         public frmCadPessoa()
         {
             InitializeComponent();
@@ -54,6 +56,7 @@ namespace View
         {
             try
             {
+                p.Id = (Int64)this.Tag;
                 p.Nome = txbNome.Text;
                 p.Telefone = mtbTel.Text;
                 p.Email = txbEmail.Text;
