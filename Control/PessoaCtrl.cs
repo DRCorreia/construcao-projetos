@@ -25,5 +25,19 @@ namespace Control
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<Pessoa> ListarPessoasDoArquivo()
+        {
+            try
+            {
+                PessoaDAO dao = new PessoaDAO();
+
+                return dao.ListarPessoasDoArquivo();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

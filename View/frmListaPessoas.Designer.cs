@@ -106,6 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmListaPessoas";
             this.Text = "Pessoas Cadastradas";
+            this.Load += new System.EventHandler(this.frmListaPessoas_Load);
             this.gpbPessoas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);

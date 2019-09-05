@@ -39,5 +39,53 @@ namespace Dao
 
             return true;
         }
+
+        public List<Pessoa> ListarPessoasDoArquivo()
+        {
+            List<Pessoa> listaPessoas = new List<Pessoa>();
+            try
+            {
+                String dir = AppDomain.CurrentDomain.BaseDirectory;
+                String path = dir + "bd.txt";
+
+                StreamReader leitor = new StreamReader(path);
+                
+                String arquivo = leitor.ReadToEnd();
+
+                Char[] separadorLinhas = { '\n' };
+                Char[] separadorColunas = { ';' };
+
+                String[] linhas = arquivo.Split(separadorLinhas);
+                for (int i = 0; i < linhas.Length - 1; i++)
+                {
+                    Pessoa p = new Pessoa();
+
+                    String[] colunas = linhas[i].Split(separadorColunas);
+
+                    //Populando campos do objeto pessoa pelos objetos do vetor
+                    p.Nome = colunas[0];
+                    p.Telefone = colunas[1];
+                    p.Email = colunas[2];
+                    p.TipoEndereco = Convert.ToInt32(colunas[3]);
+                    p.Endereco = colunas[4];
+                    p.Estado = Convert.ToInt32(colunas[5]);
+                    p.Cidade = Convert.ToInt32(colunas[6]);
+                    p.Sexo = colunas[7];
+                    p.EstadoCivil = colunas[8];
+                    p.Filhos = Convert.ToBoolean(colunas[9]);
+                    p.Animais = Convert.ToBoolean(colunas[10]);
+
+                    listaPessoas.Add(p);
+                }
+                leitor.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return listaPessoas;
+        }
+   
     }
 }

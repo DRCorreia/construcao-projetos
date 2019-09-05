@@ -28,12 +28,25 @@ namespace View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Pessoa pessoa = CarregarPessoaDoForm();
+            try
+            {
+                Pessoa pessoa = CarregarPessoaDoForm();
 
-            //Enviar objeto para camada de controle para Salvar no arquivo
-            PessoaCtrl control = new PessoaCtrl();
+                //Enviar objeto para camada de controle para Salvar no arquivo
+                PessoaCtrl control = new PessoaCtrl();
 
-            control.SalvarPessoaNoArquivo(pessoa);
+                Boolean teste = control.SalvarPessoaNoArquivo(pessoa);
+
+                if (teste)
+                {
+                    MessageBox.Show("Pessoa cadastrada com sucesso!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO AO CADASTRAR PESSOA: " + ex.Message);
+            }
+            
         }
 
         //Carregar dados do formulário em um Novo Objeto do Tipo Pessoa
